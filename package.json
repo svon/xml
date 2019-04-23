@@ -1,0 +1,42 @@
+{
+  "name": "@svon/server",
+  "version": "1.0.0",
+  "description": "A simple server based on Express",
+  "main": "bin/www.js",
+  "scripts": {
+    "test": "node ./test/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:svon/server.git"
+  },
+  "keywords": [
+    "express",
+    "servers"
+  ],
+  "author": "svon <svon.me@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/svon/server/issues"
+  },
+  "homepage": "https://github.com/svon/server#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cookie-parser": "^1.4.4",
+    "debug": "^4.1.1",
+    "express": "^4.16.4",
+    "express-minify": "^1.0.0",
+    "morgan": "^1.9.1",
+    "qs": "^6.7.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "bin": {
+    "server": "www.js"
+  }
+}

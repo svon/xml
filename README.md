@@ -1,19 +1,13 @@
-# simple-server
+# xml
 
-#### A simple server based on Express
+#### 基于 axios 的二次开发
 
 ## Installation
 
 Using npm:
 
-	npm i --save https://github.com/svon/server
+	npm i --save https://github.com/svon/xml
 
 In Node.js:
 
-	import Server from '@svon/server'
-
-	const { app } = Server()
-
-	app.get('/', function(req, res) {
-		res.send('hello')
-	})
+	import {get, post } from '@svon/xml'
