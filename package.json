@@ -1,32 +1,26 @@
 {
   "name": "@svon/xml",
   "version": "1.0.0",
-  "description": "A simple server based on Express",
+  "description": "axios 二次开发",
   "main": "bin/www.js",
   "scripts": {
-    "test": "node ./test/main.js"
+    "test": ""
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:svon/server.git"
+    "url": "git+ssh://git@github.com:svon/xml.git"
   },
   "keywords": [
-    "express",
-    "servers"
+    "axios"
   ],
   "author": "svon <svon.me@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/svon/server/issues"
+    "url": "https://github.com/svon/xml/issues"
   },
-  "homepage": "https://github.com/svon/server#readme",
+  "homepage": "https://github.com/svon/xml#readme",
   "dependencies": {
     "axios": "^0.18.0",
-    "cookie-parser": "^1.4.4",
-    "debug": "^4.1.1",
-    "express": "^4.16.4",
-    "express-minify": "^1.0.0",
-    "morgan": "^1.9.1",
     "qs": "^6.7.0"
   },
   "devDependencies": {},
@@ -37,6 +31,6 @@
     "test": "test"
   },
   "bin": {
-    "server": "www.js"
+    "xml": "bin/www.js"
   }
 }
