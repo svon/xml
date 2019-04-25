@@ -85,7 +85,7 @@ class XML {
     get(url, data) {
         return this.http({
             url: url,
-            data: data,
+            params: data,
             method: 'GET'
         })
     }
@@ -113,7 +113,7 @@ class XML {
     ['delete'](url, data) {
         return this.http({
             method: 'delete',
-            data: data,
+            params: data,
             url: url
         })
     }
