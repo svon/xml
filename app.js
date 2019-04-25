@@ -80,7 +80,7 @@ function http(baseURL, success, token, headers) {
 
 class XML {
     constructor(baseURL, success, token, headers) {
-        this.http = http(baseURL, token, headers)
+        this.http = http(baseURL, success, token, headers)
     }
     get(url, data) {
         return this.http({
