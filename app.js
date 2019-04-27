@@ -62,10 +62,14 @@ function http(baseURL, success, token, headers) {
     const http = new Http(baseURL, token, headers)
     http.interceptors.response.use(function(response){
         if (response.code || response.code === 0) {
-            if (response.code === success) {
-                return response.data
+            if (success) {
+                var data = response.data
+                if (data['code'] === success) {
+                    return data['data']
+                }
+                return Promise.reject(response)
             }
-            return Promise.reject(response)
+            return response.data
         } else {
             return response
         }
