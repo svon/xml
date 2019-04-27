@@ -4,7 +4,7 @@
  */
  const axios = require('axios')
  const Qs = require('qs')
-
+// 创建 axios 对象
  function Http(baseURL, token, headers) {
      var opt = {
          baseURL: baseURL,
@@ -45,27 +45,15 @@
      })
      return http
 }
-
-// function qs (data) {
-//     var param = []
-//     data || (data = {})
-//     for (var key in data) {
-//         param.push(key + '=' + data[key])
-//     }
-//     if (param.length > 0) {
-//         return param.join('&')
-//     }
-//     return ''
-// }
-
+// 实列化一个 http 对象
 function http(baseURL, success, token, headers) {
     const http = new Http(baseURL, token, headers)
     http.interceptors.response.use(function(response){
         if (response.code || response.code === 0) {
             if (success) {
                 var data = response.data
-                if (data['code'] === success) {
-                    return data['data']
+                if (response['code'] === success) {
+                    return response.data
                 }
                 return Promise.reject(response)
             }
@@ -77,6 +65,7 @@ function http(baseURL, success, token, headers) {
         if (error) {
             return Promise.reject(error.response)
         }
+        console.log(5)
         return Promise.reject(error)
     });
     return http
