@@ -2,8 +2,8 @@
      express ajax
      author: svon <svon.me@gmail.com>
  */
- const axios = require('axios')
- const Qs = require('qs')
+ var axios = require('axios')
+ var Qs = require('qs')
 // 创建 axios 对象
  function Http(baseURL, token, headers) {
      var opt = {
@@ -48,7 +48,7 @@
 }
 // 实列化一个 http 对象
 function http(baseURL, success, token, headers) {
-    const http = new Http(baseURL, token, headers)
+    var http = new Http(baseURL, token, headers)
     http.interceptors.response.use(function(response){
         if (response.code || response.code === 0) {
             if (success) {
